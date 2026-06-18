@@ -46,7 +46,7 @@
             <div data-collapse="medium" data-animation="default" data-duration="400" fs-scrolldisable-element="smart-nav" data-easing="ease" data-easing2="ease" role="banner" class="navbar_wrap w-nav">
                 <div class="navbar_container">
                     <a href="index.html" aria-current="page" class="navbar_logo w-nav-brand w--current">
-                        <img loading="eager" src="assets/img/Vied-logo-dark.svg" alt="Vied logo" class="logo_image"/>
+                        <img loading="eager" src="assets/img/vied-logo-dark.png" alt="Vied logo" class="logo_image"/>
                     </a>
                     <div class="navbar-content_wrap">
                         <nav role="navigation" class="navbar_menu w-nav-menu">
@@ -1708,7 +1708,7 @@
                     <div class="container">
                         <div data-w-id="a1b41f4f-e78b-52e6-2492-2ff9a80f251e" class="footer_header">
                             <a id="w-node-_69a072d1-69e6-8783-2548-858b3e84bf4f-4af74ce9" href="index.html" aria-current="page" class="footer_brand w-inline-block w--current">
-                                <img src="assets/img/Vied-logo-dark.svg" loading="lazy" alt="Vied logo" class="brand_logo"/>
+                                <img src="assets/img/vied-logo-dark.png" loading="lazy" alt="Vied logo" class="brand_logo"/>
                             </a>
                             <div class="footer-contact_wrap">
                                 <a href="tel:+91 07043788179" class="footer-contact_link w-inline-block">
@@ -1938,15 +1938,50 @@
 
 
     
-        <script>
+                <script>
+            /* ── Vied Dental Lead Handler ─────────────────────────────
+               Sends leads to BOTH WhatsApp AND Supabase.
+               To activate Supabase: replace YOUR_SUPABASE_URL and YOUR_ANON_KEY below.
+            ───────────────────────────────────────────────────────── */
+            var VIED_SUPABASE_URL = '';  // e.g. 'https://xyzcompany.supabase.co'
+            var VIED_SUPABASE_KEY = '';  // e.g. 'eyJhbGciOi...'
+
+            function viedSaveLead(name, phone) {
+                if (!VIED_SUPABASE_URL || !VIED_SUPABASE_KEY) return;
+                try {
+                    fetch(VIED_SUPABASE_URL + '/rest/v1/leads', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'apikey': VIED_SUPABASE_KEY,
+                            'Authorization': 'Bearer ' + VIED_SUPABASE_KEY,
+                            'Prefer': 'return=minimal'
+                        },
+                        body: JSON.stringify({
+                            name: name,
+                            phone: phone,
+                            source: window.location.pathname,
+                            created_at: new Date().toISOString()
+                        })
+                    });
+                } catch(_) {}
+            }
+
             function ViedLead(e){
                 e.preventDefault();
                 var f=e.target;
                 var name=(f.querySelector('input[name="name"]').value||'').trim();
                 var phone=(f.querySelector('input[name="phone"]').value||'').trim();
                 if(!name||!phone){return false;}
+
+                // 1. Save to Supabase (if configured)
+                viedSaveLead(name, phone);
+
+                // 2. Open WhatsApp
                 var msg=encodeURIComponent("Hi Vied Dental, I'm "+name+". Please call me back at "+phone+" for a dental appointment.");
-                try{ window.open("https://wa.me/9107043788179?text="+msg,"_blank"); }catch(_){}
+                try{ window.open("https://wa.me/2347043788179?text="+msg,"_blank"); }catch(_){}
+
+                // 3. Show success UI
                 var card=f.closest('.lead-form_card');
                 if(card){
                     f.style.display='none';
