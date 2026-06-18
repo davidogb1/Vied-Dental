@@ -82,13 +82,13 @@ must not depend on one specific environment. Enforce ALL of these or you have fa
 ## 0. PLACEHOLDERS (edit these once, then never touch the rest)
 
 ```
-[BUSINESS_NAME]   = "Lumora Dental"            # full brand, used in titles, footer, body copy
-[SHORT_NAME]      = "Lumora"                   # one-word wordmark, used in the logo and "At Lumora, we…"
+[BUSINESS_NAME]   = "Vied Dental"            # full brand, used in titles, footer, body copy
+[SHORT_NAME]      = "Vied"                   # one-word wordmark, used in the logo and "At Vied, we…"
 [TAGLINE]         = "Modern, Gentle Dentistry" # appended to the homepage <title> after a pipe
-[EMAIL]           = "hello@lumoradental.com"
+[EMAIL]           = "ogbalpha22@gmail.com"
 [PHONE_DISPLAY]   = "+91 93007512816"          # shown to users
-[PHONE_TEL]       = "+9193007512816"           # used in tel: and wa.me links (no spaces / symbols)
-[WHATSAPP_NUMBER] = "9193007512816"            # used in https://wa.me/<number>
+[PHONE_TEL]       = "+91709043708817"           # used in tel: and wa.me links (no spaces / symbols)
+[WHATSAPP_NUMBER] = "91709043708817"            # used in https://wa.me/<number>
 [BOOKING_URL]     = "https://calendly.com/your-handle"   # every "Book/Get Appointment" CTA
 [ACCENT]          = "#24a3b1"                   # primary accent (teal). Blue variant uses #2f80ff
 [INK_DARK]        = "#011f23"                   # deep brand dark (text + dark sections). Blue: #06182e
