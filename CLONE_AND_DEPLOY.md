@@ -117,8 +117,8 @@ for color). **Never** swap the stack or "modernize" — just change text, links,
 1. **Brand name:** find `Vied Dental` (and standalone `Vied`) across all `.html` → your business name.
 2. **Logo:** replace `assets/img/Vied-logo.svg` and `assets/img/Vied-logo-dark.svg` (footer) with
    your own SVG/PNG of the same dimensions. Replace `assets/img/favicon.svg` + `webclip.png` too.
-3. **Booking CTA:** find `https://calendly.com/shreyasrajsony11` (×6) → your Calendly/booking URL.
-4. **Phone / WhatsApp:** find `709043708817` (and `91709043708817` if present) → your number (the lead
+3. **Booking CTA:** find `https://calendly.com/ogbalpha22/30min` (×6) → your Calendly/booking URL.
+4. **Phone / WhatsApp:** find `07043788179` (and `9107043788179` if present) → your number (the lead
    form opens a prefilled WhatsApp on submit — handled by the inline `ViedLead` script before
    `</body>` on each index page).
 5. **Email:** find `ogbalpha22@gmail.com` → your email.

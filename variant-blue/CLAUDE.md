@@ -22,7 +22,7 @@ an original build.
 
 ## Wiring
 - Nav/footer links are local `.html` files. All "Book/Get Appointment" CTAs (×6) →
-  `https://calendly.com/shreyasrajsony11` (Shreyas's connected Calendly).
+  `https://calendly.com/ogbalpha22/30min` (Shreyas's connected Calendly).
 
 ## Interactions
 - Webflow IX2 (jQuery-dependent) + GSAP/ScrollTrigger/SplitText + inline GSAP (animated counters

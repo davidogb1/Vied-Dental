@@ -36,7 +36,7 @@ deletes images during a re-skin, nothing ever shows a broken/gray/red box — it
 
 ## Wiring
 - Nav/footer links are local `.html` files. All "Book/Get Appointment" CTAs (×6) →
-  `https://calendly.com/shreyasrajsony11` (Shreyas's connected Calendly).
+  `https://calendly.com/ogbalpha22/30min` (Shreyas's connected Calendly).
 
 ## Interactions
 - Webflow IX2 (jQuery-dependent) + GSAP/ScrollTrigger/SplitText + inline GSAP (animated counters
@@ -91,7 +91,7 @@ is a CSS variant and is fine to keep.)
 - `ONESHOT_PROMPT.md` = comprehensive prompt to regenerate this site from scratch with [PLACEHOLDERS].
 
 ## Conversion + content updates (14 Jun 2026)
-- Phone is `+91 93007512816` everywhere (display + tel: + wa.me 91709043708817).
+- Phone is `+91 93007512816` everywhere (display + tel: + wa.me 9107043788179).
 - Hero **lead-capture form** (`.lead-form_card`, "Book a visit", name+phone) on both variants. On
   submit it opens a prefilled WhatsApp to the clinic and shows a success state. ALWAYS visible (not
   gated by reveal). Handler `leadSubmit()` injected before </body> on index pages; CSS in Vied.css.
